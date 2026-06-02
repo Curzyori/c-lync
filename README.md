@@ -23,7 +23,7 @@
 
 ## 🌐 Live Production Demo
 Aplikasi telah dikompilasi ke level tertinggi (*Perfect Build Lock: 0 Errors & 0 Warnings*) dan berjalan live di infrastruktur Google Cloud Platform:
-* **🔗 URL Aplikasi Live:** [https://c-lync-backend-266408539680.asia-southeast1.run.app](https://c-lync-backend-266408539680.asia-southeast1.run.app)
+* **🔗 URL Aplikasi Live:** [https://c-lync-266408539680.asia-southeast1.run.app](https://c-lync-266408539680.asia-southeast1.run.app)
 
 ---
 

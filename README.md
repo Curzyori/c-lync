@@ -35,9 +35,16 @@
 
 ## 🕒 Why C-Lync?
 
-<p align="center">
-  <img src="images/dash.gif" alt="C-Lync Dashboard Demo" width="48%"/>
-</p>
+## 🖼️ Preview
+
+<table align="center">
+  <tr>
+    <td align="center"><b>Web App Preview</b></td>
+  </tr>
+  <tr>
+    <td><img src="images/dash.gif" width="200" alt="C-Lync Dashboard"/></td>
+  </tr>
+</table>
 
 Chat WhatsApp numpuk, pertanyaan yang sama berulang, respon lambat. Pemilik bisnis kecil keteteran balas chat manual seharian.
 

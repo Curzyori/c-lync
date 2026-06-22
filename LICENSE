@@ -1,0 +1,50 @@
+# C-Lync — Proprietary License
+
+**Mirror / Shadow Repository Documentation License**
+
+---
+
+## Repositori Ini
+
+Repositori ini adalah **dokumentasi publik / cermin** dari proyek C-Lync, yang dibuat khusus untuk:
+
+1. Menyajikan arsitektur sistem secara transparan
+2. Mendukung portfolio developer (@Curzyori)
+3. Mendokumentasikan proyek Challenge 11/50
+
+---
+
+## Kode Sumber Inti
+
+Kode sumber inti (Core Engine) C-Lync **TIDAK** termasuk dalam repositori publik ini. Kode sumber tersebut disimpan di dalam **repositori privat** dengan alasan:
+
+- Melindungi token API komersial (Google AI Studio)
+- Menjaga hak cipta kekayaan intelektual
+- Menjaga keunggulan kompetitif produk
+
+---
+
+## Lisensi Dokumentasi
+
+Dokumentasi dalam repositori ini (README, diagram, arsitektur) disediakan **sebagaimana adanya** untuk tujuan portfolio dan edukasi.
+
+---
+
+## Hak Cipta
+
+- **C-Lync** adalah merek dagang dan produk milik **@Curzyori**
+- Seluruh dokumentasi, logo, dan aset visual dilindungi hak cipta
+- Kompetisi #JuaraVibeCoding (Google Cloud Indonesia) — 2026
+
+---
+
+## Pertanyaan Lisensi
+
+Untuk inquiry lisensi, penggunaan komersial, atau kemitraan:
+
+- **GitHub:** https://github.com/Curzyori
+- **Portfolio:** https://curzy.dev
+
+---
+
+**© 2026 Yuken Velino (Curzyori). Hak Cipta Dilindungi.**

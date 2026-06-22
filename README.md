@@ -1,171 +1,197 @@
-# 🚀 C-Lync (V1.5.0) — SaaS Manajemen & Otomatisasi WhatsApp Berbasis Google AI
+<p align="center">
+  <img src="images/repo.png" alt="C-Lync Banner" width="100%"/>
+</p>
 
-<div align=\"center\">
+<h1 align="center">C-Lync</h1>
+<p align="center">
+  <strong>SaaS Manajemen & Otomatisasi WhatsApp Berbasis Google AI</strong>
+</p>
 
-<img src="https://img.shields.io/badge/Challenge%20Project-11%20%2F%2050-58A6FF?style=for-the-badge&logo=github&logoColor=white" />
-<img src="https://img.shields.io/badge/Google%20Cloud%20Run-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" />
-<img src="https://img.shields.io/badge/Gemini%20Pro-8E44AD?style=for-the-badge&logo=google-gemini&logoColor=white" />
-<img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
-
-</div>
-
----
-
-### 📋 Mini Formula Project
-**C-Lync** adalah **SaaS Manajemen & Otomatisasi WhatsApp** untuk **pemilik bisnis, tim Customer Service, dan developer** yang membantu **mengatasi kendala tumpukan pesan masuk (chat overload)** dengan fitur **AI Automated Summarization, Dynamic Contact Memory, dan Multi-Tenant Workspace**. Dibangun menggunakan **React.js, TypeScript, Express, dan Supabase PostgreSQL** karena **efisiensi arsitektur Unified Monolith yang mampu berjalan stabil di Google Cloud Run dengan batas RAM super ketat (< 512MiB)**.
-
-> **🏆 Project Hasil Kompetisi #JuaraVibeCoding (Google Cloud Indonesia)**
->
-> *Catatan Evaluasi Juri:*
-> *Berkas ini merupakan **Mirror / Shadow Repository** yang dirancang khusus untuk menyajikan dokumentasi arsitektur sistem, bagan alur kerja, serta cetak biru struktur folder **C-Lync (Project Challenge 11/50)** secara transparan. Kode sumber inti (Core Engine) disimpan aman di dalam repositori privat demi melindungi token API komersial dan hak cipta kekayaan intelektual.*
-
----
-
-## 🌐 Live Production Demo
-Aplikasi telah dikompilasi ke level tertinggi (*Perfect Build Lock: 0 Errors & 0 Warnings*) dan berjalan live di infrastruktur Google Cloud Platform:
-* **🔗 URL Aplikasi Live:** [https://c-lync-266408539680.asia-southeast1.run.app](https://c-lync-266408539680.asia-southeast1.run.app)
-
----
-
-## 📝 Deskripsi Singkat & Solusi Masalah
-Dalam ekosistem bisnis modern, penanganan tumpukan pesan pelanggan secara manual sering kali memicu keterlambatan respon dan hilangnya konteks preferensi kontak saat terjadi pergantian *shift* agen. C-Lync hadir sebagai asisten cerdas yang menjembatani WhatsApp Web Gateway dengan infrastruktur kecerdasan buatan Google untuk mengotomatisasikan rangkuman obrolan dan pencatatan memori data kontak secara asinkron.
-
-### 🧠 Masalah yang Diselesaikan:
-1. **Chat Overload:** Antrean ratusan pesan masuk per hari dari pelanggan yang memakan waktu lama jika harus dibaca manual satu per satu.
-2. **Desinkronisasi State Konteks:** Agen kehilangan rekam jejak riwayat keluhan atau nomor order esensial dari pelanggan ketika agen berganti tugas.
-3. **Overhead Infrastruktur Kontainer:** Kebutuhan komputasi server konvensional yang boros memori saat mengelola banyak sesi komunikasi real-time secara bersamaan.
-
-### ✨ Solusi & Fitur Unggulan C-Lync:
-* **AI Automated Summarization (Tombol SUMMARY):** Merangkum puluhan baris obrolan panjang menjadi satu baris informasi krusial instan menggunakan model LLM Gemini.
-* **Dynamic Contact Memory:** Mengekstrak informasi preferensi unik dari pesan kontak secara otomatis langsung ke profil memori agen pintar.
-* **Sleek Sub-Tab Isolation UI:** Pemisahan mutlak interaksi visual antarmuka klien ke dalam dua wilayah steril:
-  1. *Tab PESAN NYATA:* Terhubung langsung ke Supabase Realtime Listener untuk meng-update counter unread badge secara dinamis berdasarkan pergerakan pesan asli di lapangan.
-  2. *Tab SANDBOX SIMULASI:* Wilayah terisolasi in-memory untuk demo walkthrough onboarding langkah demi langkah (Step 1 - Step 5) tanpa mengotori tabel data produksi fisik.
-
----
-
-## 🛠️ Tech Stack & Alasan Pemilihan
-* **Frontend:** React.js, TypeScript, Tailwind CSS, Lucide Icons, dan Motion (Framer Motion). Dipilih untuk menghasilkan antarmuka taktil yang mematuhi standar ergonomi *touch targets* minimal $\ge 44$px lintas perangkat mobile/desktop.
-* **Backend:** Express.js & Node.js yang dikemas dalam satu port bersama frontend (*Unified Monolith Architecture*) untuk meminimalkan *cold starts* dan memangkas penggunaan RAM server produksi.
-* **AI Core Engine:** **Google AI Studio (Gemini API Pro Client SDK)**. Dipilih karena kecepatan inferensi yang sangat tinggi, pemahaman konteks bahasa alami lokal Indonesia yang unggul, dan efisiensi manajemen token.
-* **Database & Security Guard:** **Supabase (PostgreSQL 17.6)**. Menegakkan isolasi data antar-pengguna secara mutlak lewat kebijakan perlindungan Row Level Security (RLS 100%) berbasis wrapper klausa `(select auth.uid())` untuk mencegah *CPU re-evaluation bottleneck*.
-
----
+<p align="center">
+  <a href="https://c-lync-266408539680.asia-southeast1.run.app/"><strong>🌐 Live Production</strong></a>
+</p>
 
 <div align="center">
-  <img src="images/root.png" alt="C-Lync Flow & Structure Diagram" width="100%" />
+
+[![Stars](https://img.shields.io/github/stars/Curzyori/c-lync?style=for-the-badge&color=purple)](https://github.com/Curzyori/c-lync/stargazers)
+[![Forks](https://img.shields.io/github/forks/Curzyori/c-lync?style=for-the-badge&color=purple)](https://github.com/Curzyori/c-lync/network/members)
+[![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](#license)
+[![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Cloud%20Run-black?style=for-the-badge)](#)
+
 </div>
 
+<p align="center">
+  <a href="#-why-c-lync">Why This</a> ·
+  <a href="#-key-features">Features</a> ·
+  <a href="#-tech-stack">Tech Stack</a> ·
+  <a href="#-architecture">Architecture</a>
+</p>
+
 ---
 
-## 🏗️ Struktur Folder Proyek (Architecture Blueprints)
-Berikut adalah pohon direktori dari basis kode **C-Lync V1.1 (Challenge 11/50)** yang merepresentasikan seluruh modul, middleware keamanan, layanan AI, hingga konfigurasi skema database live:
+## 🕒 Why C-Lync?
 
-```text
-C-Lync-11/
-└── c-lync-fullstack/
-    ├── dist/                   # Hasil kompilasi static file frontend & backend bundle
-    ├── public/                 # Aset grafik statis dan logo aplikasi
-    ├── src/
-    │   ├── components/         # Komponen UI Modular (BottomTabs, CustomDialog, dll)
-    │   │   └── settings/       # Sektor pengaturan profil, billing, dan koneksi WA
-    │   ├── context/
-    │   │   └── AppContext.tsx  # Global State Management & state flag Onboarding
-    │   ├── jobs/
-    │   │   ├── autoCleanupJob.ts # Pembersih otomatis berkas sampah /tmp/sessions
-    │   │   ├── userDeletionJob.ts
-    │   │   └── userExportJob.ts
-    │   ├── lib/
-    │   │   ├── apiClient.ts    # Centralized Fetch wrapper untuk komunikasi API
-    │   │   ├── geminiClient.ts # Klien SDK Google GenAI (Gemini Integration)
-    │   │   └── supabase.ts     # Klien inisialisasi koneksi basis data Supabase
-    │   ├── middleware/
-    │   │   ├── auth.ts         # Autentikasi JWT guard untuk rute sensitif
-    │   │   └── tokenQuotaCheck.ts # Sistem pembatas kuota penggunaan token AI
-    │   ├── routes/
-    │   │   ├── legal.ts        # Rute GDPR & Kebijakan Privasi Data Pengguna
-    │   │   └── userRights.ts
-    │   ├── scale/
-    │   │   └── core/
-    │   ├── screens/
-    │   │   ├── AiAgents.tsx    # Layar interaksi chat dengan Agen AI Gemini
-    │   │   ├── AuthScreen.tsx  # Layar otentikasi login/register multi-tenant
-    │   │   ├── Automation.tsx  # Konfigurasi sistem pemicu otomatis respon WA
-    │   │   ├── Chats.tsx       # Core UI (Sub-Tab: PESAN NYATA vs SANDBOX SIMULASI)
-    │   │   ├── Dashboard.tsx   # Panel analitik performa token dan kuota pesan
-    │   │   └── Settings.tsx    # Panel kendali utama profil bisnis
-    │   ├── scripts/
-    │   │   └── migrateSessionsToSupabase.ts # Skrip migrasi token Baileys
-    │   ├── services/
-    │   │   ├── baileyStateManager.ts  # Sinkronisasi multi-file auth WA ke Supabase
-    │   │   ├── memoryBackupService.ts
-    │   │   └── tokenQuotaService.ts   # Pemotong token AI kuota per-user
-    │   ├── types/
-    │   │   └── express.d.ts
-    │   ├── utils/
-    │   │   ├── promptBuilder.ts       # Konstruktor prompt aman (System Guard)
-    │   │   └── promptOptimizer.ts     # Optimasi token konteks sebelum dikirim ke AI
-    │   ├── App.tsx             # Root routing dan penataan layout utama
-    │   ├── index.css           # Tailwind core directive stylesheet
-    │   ├── main.tsx            # Entry point React Client Engine
-    │   └── vite-env.d.ts
-    ├── supabase/
-    │   └── migrations/         # Berkas SQL skrip skema migrasi otomatis database
-    ├── .gitignore
-    ├── DESIGN.md               # Dokumentasi prinsip desain arsitektur visual
-    ├── index.html              # HTML shell utama aplikasi SPA
-    ├── metadata.json
-    ├── package.json            # Daftar pustaka dependensi & skrip npm
-    ├── package-lock.json
-    ├── server.ts               # Core Engine Backend & Static Files Server (Express)
-    ├── SUPABASE_SCHEMA.sql     # Skema lengkap RLS & Tabel Database Supabase
-    ├── tsconfig.json           # Konfigurasi TypeScript compiler
-    ├── vite.config.ts          # Konfigurasi bundler Vite (Frontend Engine)
-    └── whatsappService.ts      # Integrasi Baileys WA Socket & Event Listener
+<p align="center">
+  <img src="images/dash.gif" alt="C-Lync Dashboard Demo" width="80%"/>
+</p>
+
+Chat WhatsApp numpuk, pertanyaan yang sama berulang, respon lambat. Pemilik bisnis kecil keteteran balas chat manual seharian.
+
+C-Lync hadir sebagai asisten cerdas yang menjembatani WhatsApp Web Gateway dengan infrastruktur kecerdasan buatan Google untuk mengotomatisasikan rangkuman obrolan dan pencatatan memori data kontak secara asinkron.
+
+|                               |                                                              |
+| ----------------------------- | ------------------------------------------------------------ |
+| ⚡ **AI Chat Summarization**  | Rangkum puluhan pesan panjang jadi 1 baris info krusial instan |
+| 🔒 **Dynamic Contact Memory** | AI ekstrak preferensi kontak otomatis ke profil memori |
+| 🛡️ **Multi-Tenant Security** | Isolasi data 100% via Supabase RLS per-user |
+
+---
+
+## 🎯 Key Features
+
+### AI-Powered Capabilities
+
+| Feature | Status | Description |
+| :--- | :---: | :--- |
+| **AI Automated Summarization** | ✅ | Merangkum puluhan baris obrolan panjang menjadi satu baris informasi krusial instan |
+| **Dynamic Contact Memory** | ✅ | Mengekstrak informasi preferensi unik dari pesan kontak secara otomatis |
+| **Gemini AI Integration** | ✅ | Pemahaman konteks bahasa Indonesia yang unggul via Google AI Studio |
+
+### Core Platform Features
+
+| Feature | Status | Description |
+| :--- | :---: | :--- |
+| **Web-based Dashboard** | ✅ | Akses dari browser, ga perlu install aplikasi tambahan |
+| **Multi-Conversation Handling** | ✅ | Kelola banyak chat WhatsApp dari satu dashboard terpusat |
+| **Sub-Tab Isolation UI** | ✅ | Pemisahan steril antara demo walkthrough dan data produksi |
+| **Realtime Badge Counter** | ✅ | Counter unread badge bergerak dinamis via Supabase Realtime |
+
+### Infrastructure
+
+| Feature | Status | Description |
+| :--- | :---: | :--- |
+| **Google Cloud Run Deployment** | ✅ | Berjalan di GCP dengan RAM hemat < 512MiB |
+| **Unified Monolith Architecture** | ✅ | Frontend + Backend dalam satu port untuk minimalkan cold starts |
+| **PostgreSQL 17 + RLS 100%** | ✅ | Isolasi data multi-tenant via Row Level Security |
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Why |
+| :---- | :--------- | :-- |
+| **Frontend** | React.js, TypeScript, Tailwind CSS, Framer Motion | Antarmuka taktil dengan touch targets >= 44px |
+| **Backend** | Express.js, Node.js | Unified monolith, minimal cold starts |
+| **AI Engine** | Google AI Studio (Gemini Pro SDK) | Kecepatan inferensi tinggi, konteks ID unggul |
+| **Database** | Supabase (PostgreSQL 17.6) | RLS 100%, Realtime subscription |
+| **Deployment** | Google Cloud Run | Scalable serverless container |
+
+---
+
+## 🏗️ Architecture
+
+```
+c-lync/
+├── images/                  # Visual assets (banner, demo gif)
+├── src/
+│   ├── components/         # Modular UI components (BottomTabs, CustomDialog)
+│   │   └── settings/       # Profile, billing, WA connection settings
+│   ├── context/
+│   │   └── AppContext.tsx  # Global state + onboarding flag
+│   ├── jobs/               # Background jobs (autoCleanup, userDeletion)
+│   ├── lib/
+│   │   ├── apiClient.ts    # Centralized fetch wrapper
+│   │   ├── geminiClient.ts # Google GenAI SDK integration
+│   │   └── supabase.ts     # Database client
+│   ├── middleware/
+│   │   ├── auth.ts         # JWT authentication guard
+│   │   └── tokenQuotaCheck.ts  # AI token quota limiter
+│   ├── routes/              # Legal routes (GDPR, Privacy Policy)
+│   ├── screens/
+│   │   ├── AiAgents.tsx    # Gemini AI chat interaction
+│   │   ├── AuthScreen.tsx   # Multi-tenant login/register
+│   │   ├── Chats.tsx       # Core UI (Real vs Sandbox tabs)
+│   │   ├── Dashboard.tsx    # Token analytics & quota panel
+│   │   └── Settings.tsx     # Business profile controls
+│   ├── services/
+│   │   ├── baileyStateManager.ts  # WA multi-file auth sync
+│   │   ├── memoryBackupService.ts
+│   │   └── tokenQuotaService.ts   # Per-user AI quota cutter
+│   └── utils/
+│       ├── promptBuilder.ts       # Safe prompt constructor
+│       └── promptOptimizer.ts     # Context token optimizer
+├── supabase/
+│   └── migrations/         # SQL schema migrations
+├── server.ts               # Express core engine + static server
+├── whatsappService.ts      # Baileys WA Socket integration
+├── SUPABASE_SCHEMA.sql     # Complete RLS + table schema
+└── package.json            # Dependencies
 ```
 
 ---
 
-## 🔄 Alur Kerja Sistem (System Usage Flow)
-Arsitektur aplikasi berjalan secara linear dan responsif untuk menjamin penggunaan memori kontainer Cloud Run tetap berada di bawah ambang batas hemat 512MiB:
+## ⚙️ System Flow
 
-```text
-[ Pengguna ] 
-     │
-     ├──► Login / Registrasi Akun (Aman dilindungi RLS Supabase 100%)
-     │
-     ├──► Sinkronisasi WhatsApp Web (Scan QR Code via Baileys multi-file auth)
-     │
-     ├──► Masuk ke Menu Core (Chats Screen)
-     │
-     ├───────► Mengklik Sub-Tab "SANDBOX SIMULASI"
-     │         │
-     │         └─► Membaca data `SIMULATED_CHATS` murni in-memory.
-     │             Mengisolasi unread badge di angka 2 untuk keperluan demo walkthrough.
-     │             Bypass penuh dari pemotongan kuota database fisik.
-     │
-     └───────► Mengklik Sub-Tab "PESAN NYATA"
-               │
-               └─► Menyalakan Postgres Realtime Channel Listener.
-                   Membaca stream pesan WhatsApp riil yang masuk ke tabel database.
-                   Counter badge visual bergerak dinamis (3, 4, 5, dst) secara real-time.
+```
+[ User ]
+  │
+  ├── Login / Register (protected by Supabase RLS 100%)
+  │
+  ├── WhatsApp Web Sync (scan QR via Baileys multi-file auth)
+  │
+  └── Core Menu (Chats Screen)
+        │
+        ├── SANDBOX SIMULASI TAB
+        │     └── Pure in-memory demo, bypass database quota
+        │
+        └── PESAN NYATA TAB
+              └── PostgreSQL Realtime Listener
+                    └── Badge counter updates dynamically
 
-[ Sirkuit Otomatisasi Belakang Layar ]
-     │
-     ├──► Pesan Masuk ──► Disimpan Otomatis ke tabel `whatsapp_messages` via Supabase API
-     │
-     ├──► Klik Tombol "SUMMARY" ──► Payload pesan dikompilasi oleh `promptOptimizer.ts`
-     │
-     ├──► Eksekusi Inferensi ──► SDK Google AI Studio memproses ringkasan dengan kilat
-     │
-     └──► Update State Klien ──► Rangkuman 1 baris muncul di layar, RAM server terjaga aman < 512MiB
+[ Background Circuit ]
+  │
+  ├── Pesan Masuk ──► Save to whatsapp_messages table
+  │
+  ├── Klik "SUMMARY" ──► promptOptimizer.ts compiles payload
+  │
+  ├── Inferensi ──► Google AI Studio processes summary
+  │
+  └── RAM Server stays < 512MiB
 ```
 
 ---
 
-## 🛡️ Lisensi & Kepatuhan Keamanan Data
-Lisensi: Proprietary / Komersial Terbatas khusus untuk keperluan Penjurian Lomba.
+## 🏆 Awards
 
-Keamanan Data: Dilengkapi sirkuit Auto-Cleanup pada direktori /tmp/sessions untuk menghapus token otentikasi usang, serta kepatuhan penuh terhadap enkripsi data multi-tenant di sisi basis data.
+> **Project Hasil Kompetisi #JuaraVibeCoding (Google Cloud Indonesia)**
 
-Dibuat dengan dedikasi penuh untuk ekosistem Google Cloud Indonesia pada ajang #JuaraVibeCoding 2026.
+*Catatan Evaluasi Juri:* Berkas ini merupakan **Mirror / Shadow Repository** yang dirancang khusus untuk menyajikan dokumentasi arsitektur sistem, bagan alur kerja, serta cetak biru struktur folder **C-Lync (Project Challenge 11/50)** secara transparan. Kode sumber inti (Core Engine) disimpan aman di dalam repositori privat demi melindungi token API komersial dan hak cipta kekayaan intelektual.
+
+---
+
+## 📦 License
+
+This repository is a **public documentation mirror** for the C-Lync project.
+
+- **Core Code:** Proprietary / Komersial Terbatas — disimpan di repositori privat
+- **Documentation:** Mirror ini disediakan untuk transparansi arsitektur dan portfolio
+
+For licensing inquiries, contact the author.
+
+---
+
+## 🔗 Connect
+
+<p align="center">
+  <a href="https://github.com/Curzyori">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+  <a href="https://curzy.dev">
+    <img src="https://img.shields.io/badge/Portfolio-58A6FF?style=for-the-badge"/>
+  </a>
+  <a href="https://linkedin.com/in/curzy">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+</p>
+
+<sub>Built with passion as the 11th Project of the <strong>50 Projects Challenge</strong> by <strong>@curzyori</strong></sub>

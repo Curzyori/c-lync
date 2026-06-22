@@ -2,6 +2,10 @@
   <img src="images/repo.png" alt="C-Lync Banner" width="100%"/>
 </p>
 
+<p align="center">
+  <img src="images/logo.png" alt="C-Lync Logo" width="120"/>
+</p>
+
 <h1 align="center">C-Lync</h1>
 <p align="center">
   <strong>SaaS Manajemen & Otomatisasi WhatsApp Berbasis Google AI</strong>
@@ -32,7 +36,7 @@
 ## 🕒 Why C-Lync?
 
 <p align="center">
-  <img src="images/dash.gif" alt="C-Lync Dashboard Demo" width="80%"/>
+  <img src="images/dash.gif" alt="C-Lync Dashboard Demo" width="48%"/>
 </p>
 
 Chat WhatsApp numpuk, pertanyaan yang sama berulang, respon lambat. Pemilik bisnis kecil keteteran balas chat manual seharian.
